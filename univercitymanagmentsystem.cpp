@@ -61,7 +61,7 @@ cout<<"\tEnter Address Of Student: ";
 cin>>address;
 student.setAddress(address);
 
-ofstream out("C:\Shitij Namdev\Desktop\poject arline\lnct.txt",ios::app);
+ofstream out("C:\lnct.txt",ios::app);
 if(!out){
 cout<<"\tError: File Can't Open!"<<endl;
 }
@@ -79,7 +79,7 @@ void search(){
 cout<<"\tEnter RollNo Of Student: ";
 cin>>rollNo;
 
-ifstream in("C:\Shitij Namdev\Desktop\poject arline\lnct.txt");
+ifstream in("C:\lnct.txt");
 if(!in){
 cout<<"\tError: File Can't Open!"<<endl;
 }
@@ -105,8 +105,8 @@ string rollNo;
 cout<<"\tEnter RollNo Of Student: ";
 cin>>rollNo;
 
-ifstream infile("C:\Shitij Namdev\Desktop\poject arline\lnct.txt");
-ofstream outfile("C:\Shitij Namdev\Desktop\poject arline\lnct temp.txt");
+ifstream infile("C:\lnct.txt");
+ofstream outfile("C:\lnct temp.txt");
 if(!infile || !outfile){
 	cout<<"\tError: File Can't Opne!"<<endl;
 }
@@ -132,8 +132,8 @@ cout<<"\tStudent Not Found!"<<endl;
 }
 outfile.close();
 infile.close();
-remove("C:\Shitij Namdev\Desktop\poject arline\lnct.txt");
-rename("C:\Shitij Namdev\Desktop\poject arline\lnct temp.txt","C:\Shitij Namdev\Desktop\poject arline\lnct.txt");
+remove("C:\lnct.txt");
+rename("C:\lnct temp.txt","C:\lnct.txt");
 cout<<"\tData Updated!"<<endl;
 }
 
